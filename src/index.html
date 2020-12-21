@@ -13,17 +13,230 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container my-auto">
+      <div class="card align-self-center my-auto">
+        <div class="card-header h5">Payment Form Example</div>
+        <div class="card-body font-weight-normal">
+          <div class="alert alert-danger" role="alert">
+            Some fields are missing
+          </div>
+          <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationTooltip01">Card #</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip01"
+                  placeholder="Card Number"
+                  value="XXXX-XXXX-XXXX-XXXX"
+                  required
+                />
+                <div class="valid-tooltip">
+                  Please type your Credit Card Number.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationTooltip02">CVC #</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip02"
+                  placeholder="CVC"
+                  value="0000"
+                  required
+                />
+                <div class="valid-tooltip">
+                  Please type CVC Code behind your card.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationTooltipUsername">Amount</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationTooltipUsername"
+                    placeholder="$ Amount"
+                    aria-describedby="validationTooltipUsernamePrepend"
+                    required
+                  />
+                  <div class="invalid-tooltip">
+                    Please type the amount of payment.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationTooltip01">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip01"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="valid-tooltip">
+                  First Full Name.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationTooltip02">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip02"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="valid-tooltip">
+                  Last Full Name.
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationTooltip03">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip03"
+                  placeholder="City"
+                  required
+                />
+                <div class="invalid-tooltip">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationTooltip04">State</label>
+                <input
+                  type="text"
+                  class="browser-default custom-select"
+                  id="validationTooltip04"
+                  placeholder="Pick a state"
+                  required
+                />
+                <div class="invalid-tooltip">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationTooltip05">Postal Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip05"
+                  placeholder=""
+                  required
+                />
+                <div class="invalid-tooltip">
+                  Please provide a valid postal code.
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">We accept:</label>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios1"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label" for="exampleRadios1"
+                      >Visa</label
+                    >
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios1"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label" for="exampleRadios1"
+                      >MasterCard</label
+                    >
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios1"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label" for="exampleRadios1"
+                      >American Express</label
+                    >
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios1"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label" for="exampleRadios1"
+                      >PayPal</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                  <footer class="footer">Add any notes here.</footer>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div
+          class="card-footer d-flex justify-content-end bg-light border-secondary"
+        >
+          <button type="submit" class="btn btn-secondary">cancel</button>
+          <div class="p-1"></div>
+          <button type="submit" class="btn btn-primary">send</button>
+        </div>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
