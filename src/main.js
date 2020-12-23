@@ -53,3 +53,10 @@ function validation() {
     amount.classList.add("invalid");
   }
 }
+
+function displayError(message) {
+  var errorField = document.querySelector(".alert");
+  errorField.innerHTML += `<p>${message}</p>`;
+}
+
+document.querySelector(".form-control").addEventListener("submit", validation);
