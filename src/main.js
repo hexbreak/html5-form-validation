@@ -53,20 +53,3 @@ function validation() {
     amount.classList.add("invalid");
   }
 }
-
-// examples to follow
-/*
-function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-*/
-
-/*
-  card.addEventListener("submit", e => {
-    e.preventDefault();
-  });
-*/
