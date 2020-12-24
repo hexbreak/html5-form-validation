@@ -19,22 +19,22 @@
   </head>
   <body>
     <div class="container my-auto">
-      <div class="card align-self-center my-auto">
-        <div class="card-header h5">Payment Form Example</div>
-        <div class="card-body font-weight-normal">
-          <div class="alert alert-danger" role="alert">
-            Some fields are missing
-          </div>
-          <form class="needs-validation" novalidate>
+      <form id="myform">
+        <div class="card align-self-center my-auto">
+          <div class="card-header h5">Payment Form Example</div>
+          <div class="card-body font-weight-normal">
+            <div class="alert alert-danger d-none" role="alert">
+              Some fields are missing
+            </div>
+
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="validationTooltip01">Card #</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
                   id="cardnumber"
                   placeholder="Card Number"
-                  value="XXXX-XXXX-XXXX-XXXX"
                   required
                 />
                 <div class="valid-tooltip">
@@ -47,12 +47,12 @@
                   type="text"
                   class="form-control"
                   id="CCV"
-                  placeholder="CVC"
-                  value="0000"
+                  placeholder="CCV"
+                  value=""
                   required
                 />
                 <div class="valid-tooltip">
-                  Please type CVC Code behind your card.
+                  Please type CCV Code behind your card.
                 </div>
               </div>
               <div class="col-md-4 mb-3">
@@ -271,16 +271,17 @@
                 </div>
               </div>
             </div>
-          </form>
+          </div>
+
+          <div
+            class="card-footer d-flex justify-content-end bg-light border-secondary"
+          >
+            <button type="submit" class="btn btn-secondary">cancel</button>
+            <div class="p-1"></div>
+            <button type="submit" class="btn btn-primary">send</button>
+          </div>
         </div>
-        <div
-          class="card-footer d-flex justify-content-end bg-light border-secondary"
-        >
-          <button type="submit" class="btn btn-secondary">cancel</button>
-          <div class="p-1"></div>
-          <button type="submit" class="btn btn-primary">send</button>
-        </div>
-      </div>
+      </form>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -2,17 +2,18 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+const validation = e => {
+  e.preventDefault();
+  var errorField = document.querySelector(".alert");
+  errorField.innerHTML = "";
+  !errorField.classList.contains("d-none") &&
+    errorField.classList.toggle("d-none");
+  document
+    .querySelectorAll("input")
+    .forEach(input => input.classList.remove("invalid"));
 
-// const send = document.querySelector(" ");
-const cancel = document.querySelector(".btn-secondary");
-const allInputs = document.querySelectorAll(".form-control");
-// const errorTab = document.querySelector(" ");
-
-function validation() {
   var cardnumber = document.querySelector("#cardnumber");
-  var ccv = document.querySelector("#ccv");
+  var ccv = document.querySelector("#CCV");
   var amount = document.querySelector("#amount");
   var firstname = document.querySelector("#firstname");
   var lastname = document.querySelector("#lastname");
@@ -28,35 +29,37 @@ function validation() {
     displayError("CCV must be 3 digits.");
     ccv.classList.add("invalid");
   }
-  if (amount.value.length != 0) {
+  if (amount.value.length <= 0) {
     displayError("Amount required.");
     amount.classList.add("invalid");
   }
-  if (firstname.value.length != 1) {
+  if (firstname.value.length <= 3) {
     displayError("First Name required.");
-    amount.classList.add("invalid");
+    firstname.classList.add("invalid");
   }
-  if (lastname.value.length != 0) {
+  if (lastname.value.length <= 3) {
     displayError("Last Name required.");
-    amount.classList.add("invalid");
+    lastname.classList.add("invalid");
   }
-  if (city.value.length != 0) {
+  if (city.value.length <= 3) {
     displayError("City required.");
-    amount.classList.add("invalid");
+    city.classList.add("invalid");
   }
   if (state.value === "Choose...") {
     displayError("State required.");
-    amount.classList.add("invalid");
+    state.classList.add("invalid");
   }
   if (postalcode.value.length != 5) {
     displayError("Postal Code required.");
-    amount.classList.add("invalid");
+    postalcode.classList.add("invalid");
   }
-}
+};
 
 function displayError(message) {
   var errorField = document.querySelector(".alert");
   errorField.innerHTML += `<p>${message}</p>`;
+  errorField.classList.contains("d-none") &&
+    errorField.classList.toggle("d-none");
 }
 
-document.querySelector(".form-control").addEventListener("submit", validation);
+document.querySelector("#myform").addEventListener("submit", validation);
