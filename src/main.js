@@ -45,7 +45,7 @@ const validation = e => {
     displayError("City required.");
     city.classList.add("invalid");
   }
-  if (state.value === "Choose...") {
+  if (state.value === "Choose State") {
     displayError("State required.");
     state.classList.add("invalid");
   }
